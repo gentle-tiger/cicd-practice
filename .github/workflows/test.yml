@@ -1,16 +1,13 @@
-name: cicd runner test 
+name: Runner Test
 
-
-on: 
-  push: 
+on:
+  push:
     branches: [main]
 
-jobs: 
-  test: 
+jobs:
+  test:
     runs-on: ubuntu-22.04
-    steps: 
-      - name: Hello CICD (예상:성공) 
-        run: echo "hello cicd" 
-
-      - name: checkout 없이 gradlew 실행 (예상:실패)
-        run: ./gradlew build
+    container: alpine:latest  # 진짜 깡통 이미지
+    steps:
+      - run: echo "hello cicd"
+      - run: java --version
