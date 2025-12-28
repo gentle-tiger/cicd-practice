@@ -8,7 +8,7 @@ on:
 jobs: 
   test: 
     runs-on: ubuntu-22.04
-    step: 
+    steps: 
       - name: Hello CICD (예상:성공) 
         run: echo "hello cicd" 
 
